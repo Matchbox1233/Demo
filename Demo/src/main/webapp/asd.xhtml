@@ -1,0 +1,48 @@
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+<h:head>
+    <title>Gyakorlatok edzéshez</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <h:outputStylesheet library="css" name="asd.css"/>
+</h:head>
+<h:body>
+    <h1>Gyakorlatok edzéshez</h1>
+
+    <h:form>
+
+        <div class="center" style="width: fit-content; width: -moz-fit-content;">
+            <p:outputLabel for="asd" value="Gyakorlat neve: " styleClass="text center"/><br/><br/>
+            <p:inputText id="asd" value="#{asdBean.name}" styleClass="input" style="margin: auto;"/><br/><br/>
+            <div class="center" style="width: fit-content; width: -moz-fit-content;">
+                <p:commandButton value="Mentés"
+                                 actionListener="#{asdBean.save()}"
+                                 process="@form"
+                                 update="@form"
+                                 styleClass="button"
+                                 style="margin: auto;"/>
+            </div>
+        </div>
+
+        <p:dataTable id="asdTable"
+                     var="asd"
+                     value="#{asdBean.asdList}"
+                     styleClass="table"
+                     style="margin-top: 30px;"
+                     paginator="true"
+                     paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}"
+                     currentPageReportTemplate="{startRecord}-{endRecord} of {totalRecords} records"
+                     rowsPerPageTemplate="5,10,{ShowAll|'All'}">
+
+            <p:column headerText="Gyakorlatok" styleClass="thead">
+                <p:outputLabel value=" #{asd.name}" styleClass="tableData"/>
+            </p:column>
+        </p:dataTable>
+
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,77 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    width: 95vw;
+    background-color: #595b5e;
+}
+
+h1{
+    font-size: 80px;
+    font-family: "Copperplate Gothic Light";
+    text-shadow: 4px 4px darkred;
+    text-align: center;
+    letter-spacing: 8px;
+    padding: 30px;
+    margin-bottom: 60px;
+}
+
+form {
+    width: 100%;
+}
+
+.center {
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: auto;
+}
+
+.text{
+    font-size: 35px;
+    font-family: "Copperplate Gothic Light";
+    font-weight: bold;
+    text-shadow: 2px 2px lightcoral;
+    padding-left: 100px;
+
+}
+.input{
+    margin-left: 40px;
+    width: 500px;
+}
+.button{
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+}
+.button:hover{
+    background-color: #555555;
+    color: white;
+}
+.table{
+    font-family: "Copperplate Gothic Light";
+    width: 80vw;
+    margin: auto;
+    height: 400px;
+}
+.table > table {
+}
+
+.tableData{
+    font-size: 30px;
+    font-family: "Copperplate Gothic Light";
+    text-align: center;
+
+}
+
+td > label.tableData {
+    font-size: 30px;
+    font-family: "Copperplate Gothic Light";
+    text-align: center;
+}
+
+.thead {
+    font-size: 30px;
+    text-align: center;
+}
